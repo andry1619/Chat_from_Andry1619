@@ -3,10 +3,12 @@
 #include <string>
 
 class User {
-	std::string login; //Логин пользователя
-	std::string password; //Пароль пользователя
+	std::string m_login; //Логин пользователя
+	std::string m_password; //Пароль пользователя
 
 public:
+	User(const char* login, const char* password);
 
+	std::string get_login();
 };
 

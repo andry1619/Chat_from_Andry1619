@@ -11,7 +11,11 @@ class Chat {
 	std::vector <User> m_user_list; //Список всех Юзеров
 	std::map <User, Message> m_all_history; //Контейнер всей истории переписки
 
+	bool login_match(const char* login); //Проверка логина в списке юзеров на повторение, true - есть совпадение.
+
 public:
 	Chat(const char* chat_name = "default chat");
+	void create_new_user(const char* login, const char* password);
+
 };
 
